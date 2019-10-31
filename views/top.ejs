@@ -1,0 +1,107 @@
+<div class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="search">
+                <form>
+                    <input type="text" value="Search " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                    <input type="submit" value="Go">
+                </form>
+            </div>
+            <div class="header-left">
+                <ul>
+                    <% if(req.isAuthenticated()){%>
+                        <li><a href="#">Welcome,
+                            <%= req.user.name %></a>
+                        </li>
+                        <li><a href="/logout">LOGOUT</a></li>
+                        <% }else{%>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/register">Register</a></li>
+                            <% } %>
+                </ul>
+                <div class="cart box_1">
+                    <a href="/cart">
+                        <h3>
+                            <div class="total">
+                                <img src="/images/cart.png" alt="" /></h3>
+                    </a>
+                    <p><a href="javascript:;" class="simpleCart_empty">Cart</a></p>
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="head-top">
+                <div class="logo">
+                    <a href="index.html"><img src="/images/logo.png" alt=""></a>
+                </div>
+                <div class=" h_menu4">
+                    <ul class="memenu skyblue">
+                        <li class="active grid"><a class="color8" href="/">Home</a></li>
+                        <li><a class="color1" href="#">Men</a>
+                            <div class="mepanel">
+                                <div class="row">
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <ul>
+                                                <li><a href="/products/man/bags/1">Bags</a></li>
+                                                <li><a href="/products/man/caps&hats/1">Caps & Hats</a></li>
+                                                <li><a href="/products/man/hoodies&sweatshirts/1">Hoodies & Sweatshirts</a></li>
+                                                <li><a href="/products/man/t-shirts/1">T-Shirts</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <ul>
+                                                <li><a href="/products/man/shirts/1">Shirts</a></li>
+                                                <li><a href="/products/man/shoes-boots&trainers/1">Shoes, Boots & Trainers</a></li>
+                                                <li><a href="/products/man/shorts/1">Shorts</a></li>
+                                                <li><a href="/products/man/suits&blazers/1">Suits & Blazers</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="grid"><a class="color2" href="#">	Women</a>
+                            <div class="mepanel">
+                                <div class="row">
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <ul>
+                                                <li><a href="/products/woman/bags/1">Bags</a></li>
+                                                <li><a href="/products/woman/caps&hats/1">Caps & Hats</a></li>
+                                                <li><a href="/products/woman/hoodies&sweatshirts/1">Hoodies & Sweatshirts</a></li>
+                                                <li><a href="/products/woman/t-shirts/1">T-Shirts</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <ul>
+                                                <li><a href="/products/woman/shirts/1">Shirts</a></li>
+                                                <li><a href="/products/woman/shoes-boots&trainers/1">Shoes, Boots & Trainers</a></li>
+                                                <li><a href="/products/woman/shorts/1">Shorts</a></li>
+                                                <li><a href="/products/woman/suits&blazers/1">Suits & Blazers</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a class="color6" href="/add">Add product</a></li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+    </div>
